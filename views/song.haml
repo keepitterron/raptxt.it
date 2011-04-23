@@ -1,0 +1,21 @@
+#container
+	%section.testo
+		%h1
+			= @song.title
+			%a{:href=>"/testi/#{@song.artist.urlize}?a=#{cgi_escape @song.artist}"}
+				= "&mdash; #{@song.artist}"
+				= "<em>ft. #{@song.featuring}</em>" if @song.featuring.length > 0
+		%article
+			= simple_format @song.lyrics
+			%p
+				%strong= @song.title
+				= "&mdash; #{@song.artist}"
+				= "<em>ft. #{@song.featuring}</em>" if @song.featuring.length > 0
+				%br/
+				= "inserito da #{@song.username}"
+		%aside
+			.case
+				%a{:href=>@song.album.url, :title=>@song.album.title}
+					%img{:src=>@song.album.link_cover, :height=>80, :width=>80}/
+			%a{:href=>"/corretto/#{@song.song_id}", :class=>"tools right corretto", :title=>"Questo testo è corretto"} Corretto
+			%a{:href=>"/sbagliato/#{@song.song_id}", :class=>"tools wrong sbagliato", :title=>"Questo testo è sbagliato"} Sbagliato

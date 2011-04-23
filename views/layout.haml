@@ -1,0 +1,38 @@
+!!! 5
+%html
+	%head
+		%title= @title || $settings.title
+		%meta{:name =>"description", :content=>$settings.desc}
+		%meta{:charset=>"utf-8"}
+		%link{:rel=>"stylesheet", :href=>"http://fonts.googleapis.com/css?family=Arvo|PT+Sans|Nobile", :type=>"text/css"}
+		%link{:rel=>"stylesheet", :href=>style, :type=>"text/css", :media=>"screen"}
+		%link{:rel=>"shortcut icon", :href=>"/favicon.gif", :type=>"image/gif"}
+	%body{:class=>(@is_home.nil? && 'interna') || 'home'}
+		%header.m
+			.container
+				%a{:title=>$settings.desc, :class=>'h1'}= $settings.title
+				%nav
+					%ul
+						%li.f
+							%a{:href=>"/", :title=>$settings.desc, :class=>(@is_home == true && 'active')} Home
+						%li
+							%a{:href=>"/testi/", :title=>"testi e album hip hop", :class=>(@is_list == true && 'active')} Testi & Album
+						%li
+							%a{:href=>"/add_testo/", :title=>"Inserisci testo"} Inserisci testo
+						%li
+							%a{:href=>"/add_album/", :title=>"Inserisci album"} Inserisci album
+				- unless @is_home.nil?
+					%form{:action=>"/search", :id=>:finder}
+						%input(name="s" type="text" placeholder="titolo canzone")
+						%button(type="submit") cerca
+				%p Cerca fra x testi, x album, 1 love
+		= yield
+		%footer
+			.container
+				"%copy;#{Date.today.year} #{$settings.title} &mdash; tutti i testi sono di propriet&agrave; dei rispettivi artisti."
+				<a target="_blank" href="/rss" class="rss">rss</a>
+				<a target="_blank" href="http://www.facebook.com/group.php?gid=49193203478" class="fb">facebook</a>
+				<a target="_blank" href="http://twitter.com/keepitterron" class="tw">twitter</a>
+				<a target="_blank" href="http://oneblood.tumblr.com" class="tu">tumblr</a>
+				<a target="_blank" href="http://blog.raptxt.it" class="wp">blog</a>
+				<a target="_blank" href="http://it.linkedin.com/in/claudiosemeraro" class="ln">linkedin</a>

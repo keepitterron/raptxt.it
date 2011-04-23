@@ -1,0 +1,26 @@
+%section
+	.container
+		%h4
+			Ultimi album
+			%a(href="/album/" title="Album hip hop italiani") tutti gli album
+		%article.album
+			- @albums.each do |album|
+				%div
+					%a{:href=>album.url, :title=>"#{album.artist} - #{album.title}"}
+						%img{:src=>album.link_cover, :title=>album.title}
+					%h2
+						%a{:href=>album.url, :title=>"testi dall'album #{album.title}"}= album.title
+					%h3
+						%a{:href=>"/testi/#{album.artist.urlize}?a=#{cgi_escape album.artist}", :title=>"testi #{album.artist}"}= album.artist
+		%h4
+			%a(href="/testi/" title="Testi hip hop italiani") tutti i testi
+		%article.testi
+			- @songs.each do |song|
+				%div
+					%a{:href=>song.album.url, :title=>"#{song.album.artist} - #{song.album.artist}"}
+						%img{:src=>song.album.link_cover, :alt=>song.album.title}			
+					%h2
+						%a{:href=>song.url, :title=>song.title}= song.title
+					%h3
+						%a{:href=>"/testi/#{song.artist.urlize}?a=#{cgi_escape(song.artist)}", :title=>"testi #{song.artist}"}= song.artist
+					%span= song.hits

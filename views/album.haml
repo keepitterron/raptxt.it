@@ -1,0 +1,26 @@
+#container
+	%section.album
+		%h1
+			= @album.title
+			%a{:href=>"/testi/#{@album.artist.urlize}?a=#{CGI::escape @album.artist}", :title=>"testi di #{@album.artist}"}= "&mdash; #{@album.artist}"
+		%article
+			= simple_format(linkify @album.tracklist)
+		%aside
+			.case
+				%img{:src=>@album.link_cover, :alt=>@album.title}
+			= "<span>#{@album.label}</span>" unless @album.label.empty?
+			= "<span>#{@album.year}</span>" unless @album.year < 1
+			= linkify @album.site_url unless @album.site_url.empty?
+		- if @album.songs
+			%h2
+				Testi presenti
+				%a{:href=>"/add_testo/?album=#{@album.album_id}", :title=>"aggiungi un testo a questo album"} +aggiungi testo
+			#album_songs
+				- @album.songs.each do |song|
+					%div
+						%span
+							= "#{song.disc if song.disc > 0} #{'%02d' % song.track}&nbsp;&nbsp;"					
+							%a{:href=>song.url, :title=>"leggi il testo #{song.title}"}= song.title
+						%span
+							= song.artist
+							= "feat. #{song.featuring}" if song.featuring.length > 0

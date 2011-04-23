@@ -1,0 +1,30 @@
+#content-extended
+	%header
+		%h3 Soglia per
+		%ul
+			%li
+				%a{:title=>'Sfoglia per testo', :class=>'active'} Testi
+			%li
+				%a{:href=>'/album/', :title=>'Sfoglia per album', :class=>'album'} Album
+			%li
+				%a{:href=>'/artisti/', :title=>'Sfoglia per artista', :class=>'artisti'} Artisti
+	%section.album_listing
+		%nav
+			%ul
+				- ('a'..'z').each do |l|
+					%li
+						%a{:href=>"/elenco_testi/testi/#{l}"}= l
+		%table
+			%thead
+				%tr
+					%th Testo
+					%th Artista
+					%th Album
+			%tbody
+			- @songs.each do |song|
+				-unless song.album.nil?
+					%tr
+						%td
+							%a{:href=>song.url}= song.title.ucwords
+						%td= song.artist.ucwords
+						%td= song.album.title.ucwords unless song.album.nil?

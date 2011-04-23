@@ -1,0 +1,21 @@
+#content-extended
+	%header
+		%h3 Soglia per
+		%ul
+			%li
+				%a{:href=>'/testi/', :title=>'Sfoglia per testo', :class=>'testi'} Testi
+			%li
+				%a{:title=>'Sfoglia per album', :class=>'active'} Album
+			%li
+				%a{:href=>'/artisti/', :title=>'Sfoglia per artista', :class=>'artisti'} Artisti
+	%section.album_listing
+		%nav
+			%ul
+				- ('a'..'z').each do |l|
+					%li
+						%a{:href=>"/elenco_testi/album/#{l}"}= l
+		- @albums.each do |album|
+			%div{:id=>['album', album.album_id],:class=>[album.artist.urlize, album.year]}
+				%a{:href=>album.url}
+					%img{:src => album.link_cover, :width=>60, :align=>:left}/
+				%a{:href=>album.url}= "#{album.title} &mdash; #{album.artist}"
