@@ -35,9 +35,9 @@ end
 def simple_format(text)
   text = '' if text.nil?
   start_tag = '<p>'
-  text.gsub!(/\r\n?/, "\n")                    # \r\n and \r -> \n
-  text.gsub!(/\n\n+/, "<br /><br />")  # 2+ newline  -> paragraph
-  text.gsub!(/([^\n]\n)(?=[^\n])/, '\1<br />') # 1 newline   -> br
+  text.gsub!(/\r\n?/, "\n")
+  text.gsub!(/\n\n+/, "<br /><br />")
+  text.gsub!(/([^\n]\n)(?=[^\n])/, '\1<br />')
   text.insert 0, start_tag
   text.concat("</p>")
 end
@@ -47,16 +47,15 @@ CGI::escape text
 end
 
 def linkify(text)
-
 	generic_URL_regexp = Regexp.new( '(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE )
 	starts_with_www_regexp = Regexp.new( '(^|[\n ])((www)\.[^ \"\t\n\r<]*)', Regexp::MULTILINE | Regexp::IGNORECASE )
 	starts_with_ftp_regexp = Regexp.new( '(^|[\n ])((ftp)\.[^ \"\t\n\r<]*)', Regexp::MULTILINE | Regexp::IGNORECASE )
 	email_regexp = Regexp.new( '(^|[\n ])([a-z0-9&\-_\.]+?)@([\w\-]+\.([\w\-\.]+\.)*[\w]+)', Regexp::IGNORECASE )
 
-  s = text.to_s
-  s.gsub!( generic_URL_regexp, '\1<a href="\2">\2</a>' )
-  s.gsub!( starts_with_www_regexp, '\1<a href="http://\2">\2</a>' )
-  s.gsub!( starts_with_ftp_regexp, '\1<a href="ftp://\2">\2</a>' )
-  s.gsub!( email_regexp, '\1<a href="mailto:\2@\3">\2@\3</a>' )
-  s
+	s = text.to_s
+	s.gsub!( generic_URL_regexp, '\1<a href="\2">\2</a>' )
+	s.gsub!( starts_with_www_regexp, '\1<a href="http://\2">\2</a>' )
+	s.gsub!( starts_with_ftp_regexp, '\1<a href="ftp://\2">\2</a>' )
+	s.gsub!( email_regexp, '\1<a href="mailto:\2@\3">\2@\3</a>' )
+	s
 end
