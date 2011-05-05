@@ -1,0 +1,23 @@
+#content-extended
+	%header
+		%h3 Soglia per
+		%ul
+			%li
+				%a{:href=>'/testi/', :title=>'Sfoglia per testo', :class=>'testi'} Testi
+			%li
+				%a{:href=>'/album/', :title=>'Sfoglia per album', :class=>'album'} Album
+			%li
+				%a{:class=>'active'} Artisti
+	%section.artisti
+		%nav
+			%ul
+				- ('a'..'z').each do |l|
+					%li
+						%a{:href=>"/elenco_testi/album/#{l}"}= l
+		- @artists.each do |a|
+			-a.each do |a|
+				-if a.is_a? Hash
+					%div
+						%h2
+							%a{:href=>"/testi/#{a[:name]}?a=#{CGI::escape a[:name]}"}= a[:name]
+						%p= "#{a[:songs]} testi | #{a[:albums].count} album"

@@ -27,8 +27,21 @@ class Song < Sequel::Model(:song)
     end
   end
   
-  def self.list_by_album ltr
-  	dataset = DB[]
+  def self.artists(ltr)
+  	ltr ||= 'a'
+  	if ltr.match(/[0-9]/)
+  		@where = " WHERE song.artist REGEXP '/^[0-9]/, /^[\\?\'-\.<>]/' "
+  	else
+  		@where = " WHERE song.artist LIKE '#{ltr}%' "
+  	end
+  	@dataset = DB["SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id) #{@where} ORDER BY song.artist"]
+  	@artists = {}
+  	@dataset.each do |a|  		
+  		@artists["#{a[:album_artist]}"] ||= {:name => a[:album_artist], :songs => 0, :albums => []}
+  		@artists["#{a[:album_artist]}"][:songs] +=1
+  		@artists["#{a[:album_artist]}"][:albums] << a[:album_id] unless @artists["#{a[:album_artist]}"][:albums].include? a[:album_id]
+  	end
+  	@artists
   end
 	
 	def self.by_artist(name)

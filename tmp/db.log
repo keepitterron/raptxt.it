@@ -4447,3 +4447,375 @@ I, [2011-05-05T23:11:26.082279 #5606]  INFO -- : (0.000225s) SET @@wait_timeout 
 I, [2011-05-05T23:11:26.082626 #5606]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
 I, [2011-05-05T23:11:26.085267 #5606]  INFO -- : (0.002522s) DESCRIBE `album`
 I, [2011-05-05T23:11:26.102736 #5606]  INFO -- : (0.002817s) DESCRIBE `song`
+I, [2011-05-05T23:48:07.662493 #6247]  INFO -- : (0.000259s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:48:07.668632 #6247]  INFO -- : (0.000197s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:48:07.672382 #6247]  INFO -- : (0.003587s) DESCRIBE `album`
+I, [2011-05-05T23:48:28.689516 #6254]  INFO -- : (0.000234s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:48:28.689875 #6254]  INFO -- : (0.000146s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:48:28.692908 #6254]  INFO -- : (0.002907s) DESCRIBE `album`
+I, [2011-05-05T23:49:00.884412 #6265]  INFO -- : (0.000223s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:49:00.884754 #6265]  INFO -- : (0.000135s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:49:01.011848 #6265]  INFO -- : (0.126862s) DESCRIBE `album`
+I, [2011-05-05T23:49:43.918562 #6282]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:49:43.918903 #6282]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:49:43.921789 #6282]  INFO -- : (0.002755s) DESCRIBE `album`
+I, [2011-05-05T23:49:43.961809 #6282]  INFO -- : (0.025495s) DESCRIBE `song`
+I, [2011-05-05T23:49:45.520411 #6283]  INFO -- : (0.000261s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:49:45.520795 #6283]  INFO -- : (0.000148s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:49:45.523571 #6283]  INFO -- : (0.002637s) DESCRIBE `album`
+I, [2011-05-05T23:49:45.543576 #6283]  INFO -- : (0.002843s) DESCRIBE `song`
+I, [2011-05-05T23:55:56.021049 #6391]  INFO -- : (0.000241s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:55:56.021495 #6391]  INFO -- : (0.000150s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:55:56.025176 #6391]  INFO -- : (0.003432s) DESCRIBE `album`
+I, [2011-05-05T23:55:56.074709 #6391]  INFO -- : (0.002764s) DESCRIBE `song`
+I, [2011-05-05T23:55:56.240536 #6391]  INFO -- : (0.035534s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-05T23:55:56.290698 #6391]  INFO -- : (0.020301s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-05T23:56:52.273325 #6406]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-05T23:56:52.273673 #6406]  INFO -- : (0.000145s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-05T23:56:52.276596 #6406]  INFO -- : (0.002752s) DESCRIBE `album`
+I, [2011-05-05T23:56:52.318976 #6406]  INFO -- : (0.027919s) DESCRIBE `song`
+I, [2011-05-05T23:56:52.469020 #6406]  INFO -- : (0.018202s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:18:21.121883 #6702]  INFO -- : (0.000258s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:18:21.122256 #6702]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:18:21.125887 #6702]  INFO -- : (0.003488s) DESCRIBE `album`
+I, [2011-05-06T00:18:21.145143 #6702]  INFO -- : (0.004217s) DESCRIBE `song`
+I, [2011-05-06T00:18:21.297581 #6702]  INFO -- : (0.017599s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:18:50.969184 #6713]  INFO -- : (0.000221s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:18:50.969530 #6713]  INFO -- : (0.000136s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:18:50.972803 #6713]  INFO -- : (0.003138s) DESCRIBE `album`
+I, [2011-05-06T00:18:50.989761 #6713]  INFO -- : (0.002775s) DESCRIBE `song`
+I, [2011-05-06T00:18:51.138904 #6713]  INFO -- : (0.017809s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:23:12.288541 #6777]  INFO -- : (0.000236s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:23:12.288950 #6777]  INFO -- : (0.000159s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:23:12.292699 #6777]  INFO -- : (0.003607s) DESCRIBE `album`
+I, [2011-05-06T00:23:12.336030 #6777]  INFO -- : (0.029115s) DESCRIBE `song`
+I, [2011-05-06T00:23:12.488994 #6777]  INFO -- : (0.017932s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:23:12.548599 #6777]  INFO -- : (0.017741s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:24:44.784845 #6802]  INFO -- : (0.000247s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:24:44.785196 #6802]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:24:44.788039 #6802]  INFO -- : (0.002722s) DESCRIBE `album`
+I, [2011-05-06T00:24:44.844704 #6802]  INFO -- : (0.002942s) DESCRIBE `song`
+I, [2011-05-06T00:24:44.996674 #6802]  INFO -- : (0.018078s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:25:11.277041 #6811]  INFO -- : (0.000218s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:25:11.277388 #6811]  INFO -- : (0.000143s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:25:11.280170 #6811]  INFO -- : (0.002661s) DESCRIBE `album`
+I, [2011-05-06T00:25:11.321495 #6811]  INFO -- : (0.026867s) DESCRIBE `song`
+I, [2011-05-06T00:25:11.475410 #6811]  INFO -- : (0.018017s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:25:36.512034 #6822]  INFO -- : (0.000232s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:25:36.512403 #6822]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:25:36.515871 #6822]  INFO -- : (0.003341s) DESCRIBE `album`
+I, [2011-05-06T00:25:36.558913 #6822]  INFO -- : (0.028424s) DESCRIBE `song`
+I, [2011-05-06T00:25:36.715779 #6822]  INFO -- : (0.019291s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:25:57.814058 #6829]  INFO -- : (0.000227s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:25:57.814412 #6829]  INFO -- : (0.000147s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:25:57.817187 #6829]  INFO -- : (0.002645s) DESCRIBE `album`
+I, [2011-05-06T00:25:57.860390 #6829]  INFO -- : (0.028239s) DESCRIBE `song`
+I, [2011-05-06T00:25:58.011590 #6829]  INFO -- : (0.018196s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:26:17.335067 #6838]  INFO -- : (0.000230s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:26:17.335419 #6838]  INFO -- : (0.000138s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:26:17.338262 #6838]  INFO -- : (0.002720s) DESCRIBE `album`
+I, [2011-05-06T00:26:17.380060 #6838]  INFO -- : (0.027522s) DESCRIBE `song`
+I, [2011-05-06T00:26:17.531118 #6838]  INFO -- : (0.017805s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:26:52.141457 #6853]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:26:52.141811 #6853]  INFO -- : (0.000144s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:26:52.144545 #6853]  INFO -- : (0.002612s) DESCRIBE `album`
+I, [2011-05-06T00:26:52.187430 #6853]  INFO -- : (0.028247s) DESCRIBE `song`
+I, [2011-05-06T00:26:53.739503 #6855]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:26:53.739849 #6855]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:26:53.742617 #6855]  INFO -- : (0.002649s) DESCRIBE `album`
+I, [2011-05-06T00:26:53.761397 #6855]  INFO -- : (0.002837s) DESCRIBE `song`
+I, [2011-05-06T00:27:02.238819 #6859]  INFO -- : (0.000230s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:27:02.239175 #6859]  INFO -- : (0.000142s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:27:02.242138 #6859]  INFO -- : (0.002831s) DESCRIBE `album`
+I, [2011-05-06T00:27:02.282504 #6859]  INFO -- : (0.025907s) DESCRIBE `song`
+I, [2011-05-06T00:27:02.430215 #6859]  INFO -- : (0.017988s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:27:02.674189 #6859]  INFO -- : (0.018087s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:29:38.258027 #6908]  INFO -- : (0.000222s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:29:38.258434 #6908]  INFO -- : (0.000182s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:29:38.261913 #6908]  INFO -- : (0.003322s) DESCRIBE `album`
+I, [2011-05-06T00:29:38.303037 #6908]  INFO -- : (0.027257s) DESCRIBE `song`
+I, [2011-05-06T00:29:38.451416 #6908]  INFO -- : (0.017773s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:29:39.860852 #6909]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:29:39.861206 #6909]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:29:39.864014 #6909]  INFO -- : (0.002681s) DESCRIBE `album`
+I, [2011-05-06T00:29:39.881620 #6909]  INFO -- : (0.002772s) DESCRIBE `song`
+I, [2011-05-06T00:45:28.345415 #7126]  INFO -- : (0.000272s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:45:28.345778 #7126]  INFO -- : (0.000146s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:45:28.349212 #7126]  INFO -- : (0.003306s) DESCRIBE `album`
+I, [2011-05-06T00:45:28.400287 #7126]  INFO -- : (0.002704s) DESCRIBE `song`
+I, [2011-05-06T00:45:28.550593 #7126]  INFO -- : (0.017752s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:45:30.004891 #7127]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:45:30.005234 #7127]  INFO -- : (0.000135s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:45:30.008098 #7127]  INFO -- : (0.002725s) DESCRIBE `album`
+I, [2011-05-06T00:45:30.026643 #7127]  INFO -- : (0.002709s) DESCRIBE `song`
+I, [2011-05-06T00:45:51.128392 #7134]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:45:51.128780 #7134]  INFO -- : (0.000144s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:45:51.131638 #7134]  INFO -- : (0.002732s) DESCRIBE `album`
+I, [2011-05-06T00:45:51.175429 #7134]  INFO -- : (0.029630s) DESCRIBE `song`
+I, [2011-05-06T00:45:51.323592 #7134]  INFO -- : (0.017693s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:48:11.997065 #7174]  INFO -- : (0.000223s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:48:11.997416 #7174]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:48:12.000779 #7174]  INFO -- : (0.003241s) DESCRIBE `album`
+I, [2011-05-06T00:48:12.043639 #7174]  INFO -- : (0.028471s) DESCRIBE `song`
+I, [2011-05-06T00:48:12.195186 #7174]  INFO -- : (0.018251s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:48:13.620421 #7175]  INFO -- : (0.000223s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:48:13.620802 #7175]  INFO -- : (0.000172s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:48:13.623986 #7175]  INFO -- : (0.003036s) DESCRIBE `album`
+I, [2011-05-06T00:48:13.642642 #7175]  INFO -- : (0.002699s) DESCRIBE `song`
+I, [2011-05-06T00:49:05.516653 #7192]  INFO -- : (0.000231s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:49:05.517003 #7192]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:49:05.519904 #7192]  INFO -- : (0.002777s) DESCRIBE `album`
+I, [2011-05-06T00:49:05.563733 #7192]  INFO -- : (0.030036s) DESCRIBE `song`
+I, [2011-05-06T00:49:05.711045 #7192]  INFO -- : (0.017735s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:49:07.451776 #7193]  INFO -- : (0.000238s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:49:07.452182 #7193]  INFO -- : (0.000160s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:49:07.455260 #7193]  INFO -- : (0.002935s) DESCRIBE `album`
+I, [2011-05-06T00:49:07.472555 #7193]  INFO -- : (0.002746s) DESCRIBE `song`
+I, [2011-05-06T00:49:29.089767 #7200]  INFO -- : (0.000244s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:49:29.090133 #7200]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:49:29.093046 #7200]  INFO -- : (0.002781s) DESCRIBE `album`
+I, [2011-05-06T00:49:29.133875 #7200]  INFO -- : (0.026935s) DESCRIBE `song`
+I, [2011-05-06T00:49:29.283102 #7200]  INFO -- : (0.018057s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:49:30.728995 #7201]  INFO -- : (0.000221s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:49:30.729341 #7201]  INFO -- : (0.000138s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:49:30.732469 #7201]  INFO -- : (0.002996s) DESCRIBE `album`
+I, [2011-05-06T00:49:30.751257 #7201]  INFO -- : (0.002674s) DESCRIBE `song`
+I, [2011-05-06T00:50:29.312052 #7222]  INFO -- : (0.000223s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:50:29.312411 #7222]  INFO -- : (0.000146s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:50:29.315989 #7222]  INFO -- : (0.003439s) DESCRIBE `album`
+I, [2011-05-06T00:50:40.682151 #7227]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:50:40.682491 #7227]  INFO -- : (0.000135s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:50:40.685327 #7227]  INFO -- : (0.002714s) DESCRIBE `album`
+I, [2011-05-06T00:50:40.727653 #7227]  INFO -- : (0.027914s) DESCRIBE `song`
+I, [2011-05-06T00:50:40.881266 #7227]  INFO -- : (0.017837s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:50:42.292816 #7228]  INFO -- : (0.000218s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:50:42.293242 #7228]  INFO -- : (0.000153s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:50:42.326970 #7228]  INFO -- : (0.033580s) DESCRIBE `album`
+I, [2011-05-06T00:50:42.345951 #7228]  INFO -- : (0.002959s) DESCRIBE `song`
+I, [2011-05-06T00:51:00.735039 #7235]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:51:00.735387 #7235]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:51:00.738210 #7235]  INFO -- : (0.002700s) DESCRIBE `album`
+I, [2011-05-06T00:51:00.782551 #7235]  INFO -- : (0.030290s) DESCRIBE `song`
+I, [2011-05-06T00:51:00.937668 #7235]  INFO -- : (0.017724s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:51:53.114432 #7250]  INFO -- : (0.000222s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:51:53.114782 #7250]  INFO -- : (0.000145s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:51:53.117932 #7250]  INFO -- : (0.003020s) DESCRIBE `album`
+I, [2011-05-06T00:51:53.159643 #7250]  INFO -- : (0.027238s) DESCRIBE `song`
+I, [2011-05-06T00:51:53.308579 #7250]  INFO -- : (0.018606s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:53:42.219254 #7282]  INFO -- : (0.000214s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:53:42.219588 #7282]  INFO -- : (0.000121s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:53:42.222795 #7282]  INFO -- : (0.003079s) DESCRIBE `album`
+I, [2011-05-06T00:53:42.240349 #7282]  INFO -- : (0.002692s) DESCRIBE `song`
+I, [2011-05-06T00:53:42.391335 #7282]  INFO -- : (0.017763s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:53:43.825915 #7283]  INFO -- : (0.000230s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:53:43.826260 #7283]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:53:43.829347 #7283]  INFO -- : (0.002964s) DESCRIBE `album`
+I, [2011-05-06T00:53:43.849005 #7283]  INFO -- : (0.002809s) DESCRIBE `song`
+I, [2011-05-06T00:53:54.942472 #7289]  INFO -- : (0.000227s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:53:54.942810 #7289]  INFO -- : (0.000134s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:53:54.945744 #7289]  INFO -- : (0.002801s) DESCRIBE `album`
+I, [2011-05-06T00:53:54.984283 #7289]  INFO -- : (0.024172s) DESCRIBE `song`
+I, [2011-05-06T00:53:55.132290 #7289]  INFO -- : (0.017830s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:54:22.250110 #7297]  INFO -- : (0.000227s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:54:22.250448 #7297]  INFO -- : (0.000134s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:54:22.253275 #7297]  INFO -- : (0.002704s) DESCRIBE `album`
+I, [2011-05-06T00:54:22.298689 #7297]  INFO -- : (0.031331s) DESCRIBE `song`
+I, [2011-05-06T00:54:22.448722 #7297]  INFO -- : (0.017834s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:58:09.777742 #7391]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:58:09.778082 #7391]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:58:09.781484 #7391]  INFO -- : (0.003279s) DESCRIBE `album`
+I, [2011-05-06T00:58:09.832192 #7391]  INFO -- : (0.002819s) DESCRIBE `song`
+I, [2011-05-06T00:58:09.981371 #7391]  INFO -- : (0.018193s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:58:11.425797 #7392]  INFO -- : (0.000223s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:58:11.426149 #7392]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:58:11.428871 #7392]  INFO -- : (0.002598s) DESCRIBE `album`
+I, [2011-05-06T00:58:11.446457 #7392]  INFO -- : (0.002944s) DESCRIBE `song`
+I, [2011-05-06T00:58:45.057101 #7406]  INFO -- : (0.000221s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:58:45.057445 #7406]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:58:45.060224 #7406]  INFO -- : (0.002662s) DESCRIBE `album`
+I, [2011-05-06T00:58:45.109606 #7406]  INFO -- : (0.035281s) DESCRIBE `song`
+I, [2011-05-06T00:58:45.261334 #7406]  INFO -- : (0.017734s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:58:46.719569 #7408]  INFO -- : (0.000229s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:58:46.719925 #7408]  INFO -- : (0.000142s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:58:46.723054 #7408]  INFO -- : (0.003005s) DESCRIBE `album`
+I, [2011-05-06T00:58:46.740848 #7408]  INFO -- : (0.002821s) DESCRIBE `song`
+I, [2011-05-06T00:59:18.697686 #7421]  INFO -- : (0.000226s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:59:18.698029 #7421]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:59:18.700923 #7421]  INFO -- : (0.002768s) DESCRIBE `album`
+I, [2011-05-06T00:59:18.745937 #7421]  INFO -- : (0.030755s) DESCRIBE `song`
+I, [2011-05-06T00:59:18.895623 #7421]  INFO -- : (0.017915s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:59:20.346626 #7422]  INFO -- : (0.000226s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:59:20.346964 #7422]  INFO -- : (0.000136s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:59:20.349743 #7422]  INFO -- : (0.002660s) DESCRIBE `album`
+I, [2011-05-06T00:59:20.368619 #7422]  INFO -- : (0.003035s) DESCRIBE `song`
+I, [2011-05-06T00:59:48.965232 #7431]  INFO -- : (0.000241s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:59:48.965582 #7431]  INFO -- : (0.000142s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:59:48.968249 #7431]  INFO -- : (0.002545s) DESCRIBE `album`
+I, [2011-05-06T00:59:48.985199 #7431]  INFO -- : (0.002760s) DESCRIBE `song`
+I, [2011-05-06T00:59:49.133169 #7431]  INFO -- : (0.018099s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T00:59:50.622925 #7434]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T00:59:50.623270 #7434]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T00:59:50.626061 #7434]  INFO -- : (0.002668s) DESCRIBE `album`
+I, [2011-05-06T00:59:50.644406 #7434]  INFO -- : (0.002830s) DESCRIBE `song`
+I, [2011-05-06T01:00:04.591438 #7442]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:04.591790 #7442]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:04.594642 #7442]  INFO -- : (0.002727s) DESCRIBE `album`
+I, [2011-05-06T01:00:04.641207 #7442]  INFO -- : (0.032062s) DESCRIBE `song`
+I, [2011-05-06T01:00:04.790915 #7442]  INFO -- : (0.017872s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:00:06.249588 #7444]  INFO -- : (0.000234s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:06.249930 #7444]  INFO -- : (0.000138s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:06.252664 #7444]  INFO -- : (0.002614s) DESCRIBE `album`
+I, [2011-05-06T01:00:06.271212 #7444]  INFO -- : (0.003131s) DESCRIBE `song`
+I, [2011-05-06T01:00:21.866396 #7451]  INFO -- : (0.000227s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:21.866739 #7451]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:21.870244 #7451]  INFO -- : (0.003374s) DESCRIBE `album`
+I, [2011-05-06T01:00:21.907559 #7451]  INFO -- : (0.021804s) DESCRIBE `song`
+I, [2011-05-06T01:00:22.056546 #7451]  INFO -- : (0.017954s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:00:23.574511 #7452]  INFO -- : (0.000232s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:23.574857 #7452]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:23.577581 #7452]  INFO -- : (0.002606s) DESCRIBE `album`
+I, [2011-05-06T01:00:23.595429 #7452]  INFO -- : (0.002808s) DESCRIBE `song`
+I, [2011-05-06T01:00:37.005206 #7459]  INFO -- : (0.000235s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:37.005559 #7459]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:37.008828 #7459]  INFO -- : (0.003104s) DESCRIBE `album`
+I, [2011-05-06T01:00:37.047785 #7459]  INFO -- : (0.024161s) DESCRIBE `song`
+I, [2011-05-06T01:00:37.196405 #7459]  INFO -- : (0.018184s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:00:38.648517 #7460]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:38.649801 #7460]  INFO -- : (0.001037s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:38.652631 #7460]  INFO -- : (0.002649s) DESCRIBE `album`
+I, [2011-05-06T01:00:38.671094 #7460]  INFO -- : (0.002709s) DESCRIBE `song`
+I, [2011-05-06T01:00:56.977579 #7467]  INFO -- : (0.000238s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:00:56.977975 #7467]  INFO -- : (0.000146s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:00:56.980986 #7467]  INFO -- : (0.002871s) DESCRIBE `album`
+I, [2011-05-06T01:00:57.018825 #7467]  INFO -- : (0.023924s) DESCRIBE `song`
+I, [2011-05-06T01:00:57.168190 #7467]  INFO -- : (0.018049s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:01:20.471804 #7474]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:01:20.472150 #7474]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:01:20.475053 #7474]  INFO -- : (0.002776s) DESCRIBE `album`
+I, [2011-05-06T01:01:20.517156 #7474]  INFO -- : (0.027524s) DESCRIBE `song`
+I, [2011-05-06T01:01:20.671045 #7474]  INFO -- : (0.018201s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:01:22.087228 #7475]  INFO -- : (0.000226s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:01:22.087577 #7475]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:01:22.090322 #7475]  INFO -- : (0.002613s) DESCRIBE `album`
+I, [2011-05-06T01:01:22.108273 #7475]  INFO -- : (0.002763s) DESCRIBE `song`
+I, [2011-05-06T01:01:56.912443 #7488]  INFO -- : (0.000232s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:01:56.912806 #7488]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:01:56.915671 #7488]  INFO -- : (0.002737s) DESCRIBE `album`
+I, [2011-05-06T01:01:56.962018 #7488]  INFO -- : (0.031638s) DESCRIBE `song`
+I, [2011-05-06T01:01:57.114413 #7488]  INFO -- : (0.018468s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:02:57.199052 #7505]  INFO -- : (0.000289s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:02:57.199455 #7505]  INFO -- : (0.000146s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:02:57.202804 #7505]  INFO -- : (0.003220s) DESCRIBE `album`
+I, [2011-05-06T01:02:57.245703 #7505]  INFO -- : (0.027154s) DESCRIBE `song`
+I, [2011-05-06T01:02:57.395994 #7505]  INFO -- : (0.017617s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:03:51.955073 #7529]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:03:51.955423 #7529]  INFO -- : (0.000141s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:03:51.958293 #7529]  INFO -- : (0.002748s) DESCRIBE `album`
+I, [2011-05-06T01:03:52.009455 #7529]  INFO -- : (0.003127s) DESCRIBE `song`
+I, [2011-05-06T01:03:52.162497 #7529]  INFO -- : (0.018311s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:05:47.752590 #7566]  INFO -- : (0.000227s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:05:47.752941 #7566]  INFO -- : (0.000142s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:05:47.756332 #7566]  INFO -- : (0.003265s) DESCRIBE `album`
+I, [2011-05-06T01:05:47.797729 #7566]  INFO -- : (0.002545s) DESCRIBE `song`
+I, [2011-05-06T01:05:47.944820 #7566]  INFO -- : (0.017653s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:05:49.379951 #7567]  INFO -- : (0.000259s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:05:49.380447 #7567]  INFO -- : (0.000240s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:05:49.383744 #7567]  INFO -- : (0.003146s) DESCRIBE `album`
+I, [2011-05-06T01:05:49.402204 #7567]  INFO -- : (0.002781s) DESCRIBE `song`
+I, [2011-05-06T01:07:08.331215 #7592]  INFO -- : (0.000235s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:08.331572 #7592]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:08.334458 #7592]  INFO -- : (0.002755s) DESCRIBE `album`
+I, [2011-05-06T01:07:08.375858 #7592]  INFO -- : (0.027531s) DESCRIBE `song`
+I, [2011-05-06T01:07:08.525299 #7592]  INFO -- : (0.018050s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:07:10.008756 #7593]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:10.009102 #7593]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:10.011855 #7593]  INFO -- : (0.002626s) DESCRIBE `album`
+I, [2011-05-06T01:07:10.030010 #7593]  INFO -- : (0.002981s) DESCRIBE `song`
+I, [2011-05-06T01:07:29.957523 #7600]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:29.957868 #7600]  INFO -- : (0.000138s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:29.960773 #7600]  INFO -- : (0.002787s) DESCRIBE `album`
+I, [2011-05-06T01:07:30.006394 #7600]  INFO -- : (0.031528s) DESCRIBE `song`
+I, [2011-05-06T01:07:30.153793 #7600]  INFO -- : (0.017708s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:07:31.673339 #7601]  INFO -- : (0.000225s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:31.673686 #7601]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:31.676562 #7601]  INFO -- : (0.002746s) DESCRIBE `album`
+I, [2011-05-06T01:07:31.736503 #7601]  INFO -- : (0.045853s) DESCRIBE `song`
+I, [2011-05-06T01:07:54.120703 #7608]  INFO -- : (0.000221s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:54.121049 #7608]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:54.124553 #7608]  INFO -- : (0.003384s) DESCRIBE `album`
+I, [2011-05-06T01:07:54.182067 #7608]  INFO -- : (0.002760s) DESCRIBE `song`
+I, [2011-05-06T01:07:54.329580 #7608]  INFO -- : (0.018170s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:07:55.792150 #7611]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:07:55.792495 #7611]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:07:55.795254 #7611]  INFO -- : (0.002630s) DESCRIBE `album`
+I, [2011-05-06T01:07:55.813673 #7611]  INFO -- : (0.002798s) DESCRIBE `song`
+I, [2011-05-06T01:08:19.790081 #7619]  INFO -- : (0.000221s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:08:19.790419 #7619]  INFO -- : (0.000135s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:08:19.793197 #7619]  INFO -- : (0.002661s) DESCRIBE `album`
+I, [2011-05-06T01:08:19.832212 #7619]  INFO -- : (0.024815s) DESCRIBE `song`
+I, [2011-05-06T01:08:19.981324 #7619]  INFO -- : (0.017737s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:08:43.605912 #7626]  INFO -- : (0.000251s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:08:43.606260 #7626]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:08:43.609127 #7626]  INFO -- : (0.002739s) DESCRIBE `album`
+I, [2011-05-06T01:08:43.650733 #7626]  INFO -- : (0.026773s) DESCRIBE `song`
+I, [2011-05-06T01:08:43.802044 #7626]  INFO -- : (0.017602s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:09:02.636096 #7633]  INFO -- : (0.000228s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:09:02.636442 #7633]  INFO -- : (0.000138s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:09:02.639250 #7633]  INFO -- : (0.002685s) DESCRIBE `album`
+I, [2011-05-06T01:09:02.692610 #7633]  INFO -- : (0.003140s) DESCRIBE `song`
+I, [2011-05-06T01:09:02.841115 #7633]  INFO -- : (0.018140s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:09:29.291948 #7642]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:09:29.292308 #7642]  INFO -- : (0.000143s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:09:29.295029 #7642]  INFO -- : (0.002587s) DESCRIBE `album`
+I, [2011-05-06T01:09:29.333387 #7642]  INFO -- : (0.024198s) DESCRIBE `song`
+I, [2011-05-06T01:09:29.483200 #7642]  INFO -- : (0.018301s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:10:39.677449 #7671]  INFO -- : (0.000217s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:10:39.677801 #7671]  INFO -- : (0.000139s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:10:39.681617 #7671]  INFO -- : (0.003679s) DESCRIBE `album`
+I, [2011-05-06T01:10:39.720761 #7671]  INFO -- : (0.025316s) DESCRIBE `song`
+I, [2011-05-06T01:10:39.868529 #7671]  INFO -- : (0.017850s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:11:06.538281 #7680]  INFO -- : (0.000252s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:11:06.538681 #7680]  INFO -- : (0.000155s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:11:06.541372 #7680]  INFO -- : (0.002548s) DESCRIBE `album`
+I, [2011-05-06T01:11:06.559547 #7680]  INFO -- : (0.002802s) DESCRIBE `song`
+I, [2011-05-06T01:11:06.710015 #7680]  INFO -- : (0.018118s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:11:37.284316 #7693]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:11:37.284665 #7693]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:11:37.287576 #7693]  INFO -- : (0.002784s) DESCRIBE `album`
+I, [2011-05-06T01:11:37.327191 #7693]  INFO -- : (0.024408s) DESCRIBE `song`
+I, [2011-05-06T01:11:37.477374 #7693]  INFO -- : (0.017781s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:11:56.879397 #7698]  INFO -- : (0.000220s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:11:56.879757 #7698]  INFO -- : (0.000140s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:11:56.882682 #7698]  INFO -- : (0.002796s) DESCRIBE `album`
+I, [2011-05-06T01:11:56.926844 #7698]  INFO -- : (0.029924s) DESCRIBE `song`
+I, [2011-05-06T01:11:57.076436 #7698]  INFO -- : (0.017589s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:12:55.653300 #7725]  INFO -- : (0.000236s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:12:55.653714 #7725]  INFO -- : (0.000159s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:12:55.658996 #7725]  INFO -- : (0.005139s) DESCRIBE `album`
+I, [2011-05-06T01:12:55.676107 #7725]  INFO -- : (0.002784s) DESCRIBE `song`
+I, [2011-05-06T01:12:55.824473 #7725]  INFO -- : (0.018378s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:13:26.921161 #7738]  INFO -- : (0.000222s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:13:26.921504 #7738]  INFO -- : (0.000137s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:13:26.924286 #7738]  INFO -- : (0.002663s) DESCRIBE `album`
+I, [2011-05-06T01:13:26.942101 #7738]  INFO -- : (0.002721s) DESCRIBE `song`
+I, [2011-05-06T01:13:27.094331 #7738]  INFO -- : (0.018339s) SELECT song.artist AS song_artist, album.title, album.artist as album_artist, song.song_id, song.album_id, cover FROM song JOIN album USING (album_id)  WHERE song.artist LIKE 'a%'  ORDER BY song.artist
+I, [2011-05-06T01:13:38.858836 #7743]  INFO -- : (0.000230s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:13:38.859280 #7743]  INFO -- : (0.000204s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:13:38.862150 #7743]  INFO -- : (0.002717s) DESCRIBE `album`
+I, [2011-05-06T01:13:38.901842 #7743]  INFO -- : (0.025122s) DESCRIBE `song`
+I, [2011-05-06T01:13:39.053594 #7743]  INFO -- : (0.015247s) SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album_title, album.artist as album_artist, cover as album_cover  FROM song JOIN album USING (album_id) WHERE album.artist = 'Kuno, Palla Da Phella E Dj S.I.D.' ORDER BY album.date, disc, track, song.title
+I, [2011-05-06T01:13:39.198367 #7743]  INFO -- : (0.144227s) SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album_title, album.artist as album_artist, cover as album_cover  FROM song JOIN album USING (album_id)
+		 WHERE (song.artist = 'Kuno, Palla Da Phella E Dj S.I.D.' OR song.featuring LIKE '%Kuno, Palla Da Phella E Dj S.I.D.%')
+		 ORDER BY album.title, disc, track, song.title
+I, [2011-05-06T01:13:44.225281 #7745]  INFO -- : (0.000241s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:13:44.225635 #7745]  INFO -- : (0.000145s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:13:44.228524 #7745]  INFO -- : (0.002763s) DESCRIBE `album`
+I, [2011-05-06T01:13:44.266301 #7745]  INFO -- : (0.023223s) DESCRIBE `song`
+I, [2011-05-06T01:13:44.401227 #7745]  INFO -- : (0.004625s) SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album_title, album.artist as album_artist, cover as album_cover  FROM song JOIN album USING (album_id) WHERE album.artist = 'Aban' ORDER BY album.date, disc, track, song.title
+I, [2011-05-06T01:13:44.536224 #7745]  INFO -- : (0.133988s) SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album_title, album.artist as album_artist, cover as album_cover  FROM song JOIN album USING (album_id)
+		 WHERE (song.artist = 'Aban' OR song.featuring LIKE '%Aban%')
+		 ORDER BY album.title, disc, track, song.title
+I, [2011-05-06T01:13:46.050349 #7748]  INFO -- : (0.000224s) SET @@wait_timeout = 2147483
+I, [2011-05-06T01:13:46.050705 #7748]  INFO -- : (0.000143s) SET SQL_AUTO_IS_NULL=0
+I, [2011-05-06T01:13:46.053324 #7748]  INFO -- : (0.002498s) DESCRIBE `album`
+I, [2011-05-06T01:13:46.074630 #7748]  INFO -- : (0.002965s) DESCRIBE `song`

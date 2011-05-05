@@ -77,7 +77,7 @@ module Raptxt
 		end
 		get '/artisti/:ltr?' do
 			@is_list = true
-			@songs = Song.artists params[:ltr]
+			@artists = Song.artists params[:ltr]
 			haml :list_artists
 		end
 		not_found do
