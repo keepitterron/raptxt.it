@@ -75,7 +75,7 @@ module Raptxt
 			404 unless @song
 			haml :song
 		end
-		get '/artist/:ltr?' do
+		get '/artisti/:ltr?' do
 			@is_list = true
 			@songs = Song.artists params[:ltr]
 			haml :list_artists
