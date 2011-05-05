@@ -16,7 +16,6 @@ module Raptxt
 		  require File.join( File.expand_path(File.dirname(__FILE__)), 'helpers' )
 		end
 	
-	
 		get '/' do
 			@is_home = true
 			@albums = Album.latest
@@ -75,6 +74,11 @@ module Raptxt
 			@title = "#{@song.title} - #{@song.artist} | #{$settings.title}"
 			404 unless @song
 			haml :song
+		end
+		get '/artist/:ltr?' do
+			@is_list = true
+			@songs = Song.artists params[:ltr]
+			haml :list_artists
 		end
 		not_found do
 			@title = '404 | not found - raptxt.it'
