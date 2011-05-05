@@ -17,5 +17,5 @@
 			.case
 				%a{:href=>@song.album.url, :title=>@song.album.title}
 					%img{:src=>@song.album.link_cover, :height=>80, :width=>80}/
-			%a{:href=>"/corretto/#{@song.song_id}", :class=>"tools right corretto", :title=>"Questo testo è corretto"} Corretto
-			%a{:href=>"/sbagliato/#{@song.song_id}", :class=>"tools wrong sbagliato", :title=>"Questo testo è sbagliato"} Sbagliato
+			%a{:href=>"/corretto/#{@song.song_id}", :class=>"tools right corretto", :title=>"Questo testo &egrave; corretto"} Corretto
+			%a{:href=>"/sbagliato/#{@song.song_id}", :class=>"tools wrong sbagliato", :title=>"Questo testo &egrave; sbagliato"} Sbagliato

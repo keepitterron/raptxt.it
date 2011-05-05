@@ -5,6 +5,7 @@
 			%a(href="/album/" title="Album hip hop italiani") tutti gli album
 		%article.album
 			- @albums.each do |album|
+				-puts album.inspect
 				%div
 					%a{:href=>album.url, :title=>"#{album.artist} - #{album.title}"}
 						%img{:src=>album.link_cover, :title=>album.title}
@@ -16,11 +17,12 @@
 			%a(href="/testi/" title="Testi hip hop italiani") tutti i testi
 		%article.testi
 			- @songs.each do |song|
+				-puts song.inspect
 				%div
-					%a{:href=>song.album.url, :title=>"#{song.album.artist} - #{song.album.artist}"}
-						%img{:src=>song.album.link_cover, :alt=>song.album.title}			
+					%a{:href=>song.album_url, :title=>"#{song.album_title} - #{song.album_artist}"}
+						%img{:src=>song.cover, :alt=>song.album_title}			
 					%h2
 						%a{:href=>song.url, :title=>song.title}= song.title
 					%h3
 						%a{:href=>"/testi/#{song.artist.urlize}?a=#{cgi_escape(song.artist)}", :title=>"testi #{song.artist}"}= song.artist
-					%span= song.hits
+					%span= song.m_hits

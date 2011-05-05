@@ -19,7 +19,7 @@
 				- @album.songs.each do |song|
 					%div
 						%span
-							= "#{song.disc if song.disc > 0} #{'%02d' % song.track}&nbsp;&nbsp;"					
+							= "#{song.disc if song.disc > 0} #{'%02d' % song.track}&nbsp;&nbsp;"
 							%a{:href=>song.url, :title=>"leggi il testo #{song.title}"}= song.title
 						%span
 							= song.artist

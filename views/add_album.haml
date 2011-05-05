@@ -1,0 +1,33 @@
+#container
+	%section.testo
+		%h1 Inserisci album
+		%p.alert{:style=>"display:#{@error ? 'block' : 'none'}"}= @error
+		%form(class="add_item" action="" method="post" enctype="multipart/form-data")
+			%div
+				%label <strong>Titolo *</strong>
+				%input(type="text" name="album[title]" id="titolo" placeholder="titolo album"){:value=>@a.title}
+			%div
+				%label <strong>Artista *</strong>
+				%input(type="text" name="album[artist]" id="artist" placeholder="artista album"){:value=>@a.artist}
+			%div
+				%label <strong>Label</strong>
+				%input(type="text" name="album[label]" id="label" placeholder="label album"){:value=>@a.label}
+			%div
+				%label <strong>Anno</strong>
+				%input(type="text" name="album[year]" id="year" placeholder="anno album"){:value=>@a.year}
+			%div
+				%label <strong>Sito</strong>
+				%input(type="text" name="album[site_url]" id="site_url" placeholder="sito di riferimento artista"){:value=>@a.site_url}
+			%div
+				%label <strong>Inserito da</strong>
+				%input(type="text" name="album[username]" id="username" placeholder="tuo nick"){:value=>@a.username}
+			%div
+				%label <strong>Cover</strong>
+				%input(type="file" name="album[cover]" id="cover")
+			%div
+				%textarea(name="album[tracklist]" id="tracklist" placeholder="testo canzone")= @a.tracklist
+			%button(type="submit" value="save") + aggiungi
+
+:javascript
+	var data = "".split("|");
+	$("#artista").autocomplete(data);

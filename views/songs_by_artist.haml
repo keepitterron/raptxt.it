@@ -3,17 +3,17 @@
 		- @songs.each do |album|
 			-album.each do |s|
 				- if s.is_a? Array
-					%h1= "#{s[0][:album]} &#8212; #{s[0][:artist]}"
+					%h1= "#{s.first.album_title} &#8212; #{s.first.album_artist}"
 					%aside
-						%a{:href=>''}
-							%img{:src=>"/img/image/#{s[0][:cover]}", :width=>80, :height=>80}
+						%a{:href=>s.first.album_url}
+							%img{:src=>"/img/image/#{s.first.album_cover}", :width=>80, :height=>80}
 					
 					%article
 						- s.each do |song|
 							%div
 								%span
-									= song[:track]
-									%a{:href=>song[:title].urlize}= song[:title]
+									= song.track
+									%a{:href=>song.url}= song.title
 								%span
-									= song[:artist]
-									= "feat. #{song[:featuring]}" unless song[:featuring].empty?
+									= song.artist
+									= "feat. #{song.featuring}" unless song.featuring.empty?

@@ -60,14 +60,3 @@ def linkify(text)
   s.gsub!( email_regexp, '\1<a href="mailto:\2@\3">\2@\3</a>' )
   s
 end
-
-def parse_song_by_artist(name)
-	dataset = DB["SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album, album.artist as artista, cover  FROM song JOIN album USING (album_id) WHERE album.artist = '#{name}' ORDER BY album.date, disc, track, song.title"]
-	albums = {}
-	dataset.each do |a|
-		albums[a[:album_id]] ||= Array.new
-		albums[a[:album_id]] << a
-	end
-	albums
-	
-end

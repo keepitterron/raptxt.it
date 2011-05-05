@@ -1,3 +1,4 @@
+# encoding: utf-8
 # RemoveAccents version 1.0.3 (c) 2008-2009 Solutions Informatiques Techniconseils inc.
 # 
 # This module adds 2 methods to the string class. 
@@ -55,7 +56,7 @@ class String
     str = String.new(self)
     String::ACCENTS_MAPPING.each {|letter,accents|
       packed = accents.pack('U*')
-      rxp = Regexp.new("[#{packed}]", nil, 'U')
+      rxp = Regexp.new("[#{packed}]", nil, 'u')
       str.gsub!(rxp, letter)
     }
     
@@ -78,7 +79,7 @@ class String
     options[:convert_specials] ||= true
     options[:regexp] ||= /[^-_A-Za-z0-9]/
     
-    str = self.strip.removeaccents
+    str = self.force_encoding('utf-8').strip.removeaccents
     str.downcase! if options[:downcase]
     
     str.gsub!(/[,.;\?!']/,'_') if options[:convert_specials]
