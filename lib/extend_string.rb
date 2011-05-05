@@ -56,7 +56,7 @@ class String
     str = String.new(self)
     String::ACCENTS_MAPPING.each {|letter,accents|
       packed = accents.pack('U*')
-      rxp = Regexp.new("[#{packed}]", nil, 'u')
+      rxp = Regexp.new("[#{packed}]", nil)
       str.gsub!(rxp, letter)
     }
     
@@ -77,14 +77,15 @@ class String
     options[:downcase] ||= true
     options[:convert_spaces] ||= true
     options[:convert_specials] ||= true
-    options[:regexp] ||= /[^-_A-Za-z0-9]/
+    options[:regexp] ||= /[^-_.!A-Za-z0-9]/
     
     str = self.force_encoding('utf-8').strip.removeaccents
     str.downcase! if options[:downcase]
     
-    str.gsub!(/[,.;\?!']/,'_') if options[:convert_specials]
+    str.gsub!(/[;\?']/,'_') if options[:convert_specials]
     str.gsub!(/\ /,'-') if options[:convert_spaces]
-    str.gsub(options[:regexp], '')
-    str.squeeze('_').chomp('_')
+    str.gsub!(/&/, 'e')
+    str.gsub!(/[^-_!()A-Za-z0-9]/, '')
+    str.squeeze('_').chomp('_')    
   end
 end

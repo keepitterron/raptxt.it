@@ -19,5 +19,5 @@
 				-if a.is_a? Hash
 					%div
 						%h2
-							%a{:href=>"/testi/#{a[:name]}?a=#{CGI::escape a[:name]}"}= a[:name]
+							%a{:href=>"/testi/#{a[:name].urlize}?a=#{CGI::escape a[:name]}"}= a[:name]
 						%p= "#{a[:songs]} testi | #{a[:albums].count} album"
