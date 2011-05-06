@@ -1,0 +1,43 @@
+#container
+	%section.testo
+		%h1 Inserisci Testo
+		%p.alert{:style=>"display:#{@error ? 'block' : 'none'}"}= @error
+		%form(class="add_item" action="" method="post" enctype="multipart/form-data")
+			%div
+				%label <strong>Titolo *</strong>
+				%input(type="text" name="song[title]" id="titolo" placeholder="titolo"){:value=>@s.title}
+				<span>sicuro che questo testo <a href="/testi/">non esiste?</a></span>
+			%div
+				%label <strong>Artista *</strong>
+				%input(type="text" name="song[artist]" id="artist" placeholder="artista"){:value=>@s.artist}
+				<span></span>
+			%div
+				%label <strong>Featuring</strong>
+				%input(type="text" name="song[featuring]" id="label" placeholder="featuring"){:value=>@s.featuring}
+				<span>separati da virgola</span>
+			%div
+				%label <strong>Album</strong>
+				%select(name="song[album_id]" id="album"){:value=>@s.album_id}
+					- @albums.each do |a|
+						%option{:value=>a[:album_id], :selected=>(@s.album_id == a[:album_id])}= "#{a[:title]} (#{a[:artist]})"
+				<span>non trovi un album? <a href="/add_album">aggiungilo!</a></span>
+			%div
+				%label <strong>Traccia</strong>
+				%select(name="song[track]" id="track"){:value=>@s.track}
+					- (1..40).each do |n|
+						%option{:value=>n, :selected=>(@s.track == n)}= n
+			%div
+				%label <strong>Disco</strong>
+				%select(name="song[disc]" id="disc"){:value=>@s.disc}
+					- (1..4).each do |n|
+						%option{:value=>n, :selected=>(@s.disc == n)}= n
+			%div
+				%label <strong>Inserito da</strong>
+				%input(type="text" name="song[username]" id="username" placeholder="tuo nick"){:value=>@s.username}
+			%div
+				%textarea(name="song[lyrics]" id="lyrics" placeholder="testo canzone")= @s.lyrics
+			%button(type="submit" value="save") + aggiungi
+
+:javascript
+	var data = "".split("|");
+	$("#artista").autocomplete(data);
