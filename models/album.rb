@@ -32,6 +32,10 @@ class Album < Sequel::Model(:album)
 		super
 		notify_me
 	end
+	
+	def self.for_select
+		DB["SELECT album_id, title, artist FROM album ORDER BY title ASC"]
+	end
   
   def self.search(q)
     value = "%#{q}%"
