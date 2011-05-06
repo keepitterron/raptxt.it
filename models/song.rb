@@ -1,5 +1,4 @@
 class Song < Sequel::Model(:song)
-  many_to_one :album
   attr_accessor :album_title, :album_artist, :album_cover
   
   def after_initialize
@@ -18,15 +17,7 @@ class Song < Sequel::Model(:song)
   def cover
   	'/img/image/'+album_cover unless album_cover.nil?
   end
-  def self.list(ltr)
-  	ltr ||= 'a'
-  	if ltr.match(/[0-9]/)
-  		filter(:title.ilike(/^[0-9]/, /^[\\?\'-\.<>]/)).order(:title.asc)
-  	else
-    	filter(:title.ilike("#{ltr}%")).order(:title.asc)
-    end
-  end
-  
+
   def self.artists(ltr)
   	ltr ||= 'a'
   	if ltr.match(/[0-9]/)
@@ -74,6 +65,22 @@ class Song < Sequel::Model(:song)
 		end		
 
 		@albums
+	end
+	def self.by_title(ltr)
+  	ltr ||= 'a'
+  	if ltr.match(/[0-9]/)
+  		@where = ' WHERE song.title REGEXP \'^[0-9]\' OR song.title REGEXP \'^[\\?\\\'-\.<>]\''
+  	else
+  		@where = " WHERE song.title LIKE '#{ltr}%' "
+  	end
+  	@dataset = DB["SELECT song.title, song.artist, album.title as album_title, song.track, song.song_id, song.album_id, song.featuring, song.lyrics FROM song JOIN album USING (album_id) #{@where} ORDER BY song.title"]
+  	@titles = []
+  	@dataset.each do |title|
+  		s = Song.load(title)
+  		s.album_title = title[:album_title]
+  		@titles << s
+  	end
+  	@titles
 	end
 	def self.latest
 		@dataset = DB["SELECT song.title, song.artist, featuring, song_id, song.album_id, track, album.title as album_title, album.artist as album_artist, cover as album_cover, m_hits FROM song JOIN album USING (album_id) ORDER BY m_hits DESC LIMIT 20"]

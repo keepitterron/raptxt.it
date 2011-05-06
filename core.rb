@@ -58,7 +58,7 @@ module Raptxt
 			params[:ltr] ||= 'a'
 			pass if params[:ltr].length > 1
 			@is_list = true
-			@songs = Song.list params[:ltr]
+			@songs = Song.by_title params[:ltr]
 			haml :list_testi
 		end
 		get '/testi/:artist' do
@@ -76,6 +76,7 @@ module Raptxt
 			haml :song
 		end
 		get '/artisti/:ltr?' do
+			params[:ltr] ||= 'a'
 			@is_list = true
 			@artists = Song.artists params[:ltr]
 			haml :list_artists
