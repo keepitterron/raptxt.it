@@ -13,7 +13,9 @@
 			%ul
 				- ('a'..'z').each do |l|
 					%li
-						%a{:href=>"/elenco_testi/testi/#{l}"}= l
+						%a{:href=>"/testi/#{l}", :class=>"#{'a' if params[:ltr] == l}"}= l.capitalize
+				%li
+					%a{:href=>"/testi/0", :class=>"#{'a' if params[:ltr].match(/[0-9]/)}"} #
 		%table
 			%thead
 				%tr
@@ -22,9 +24,9 @@
 					%th Album
 			%tbody
 			- @songs.each do |song|
-				-unless song.album.nil?
+				-unless song.album_id.nil?
 					%tr
 						%td
 							%a{:href=>song.url}= song.title.ucwords
 						%td= song.artist.ucwords
-						%td= song.album.title.ucwords unless song.album.nil?
+						%td= song.album_title.ucwords unless song.album_title.nil?

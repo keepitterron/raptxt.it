@@ -13,7 +13,10 @@
 			%ul
 				- ('a'..'z').each do |l|
 					%li
-						%a{:href=>"/elenco_testi/album/#{l}"}= l
+						%a{:href=>"/album/#{l}", :class=>"#{'a' if params[:ltr] == l}"}= l.capitalize
+				%li
+					%a{:href=>"/album/0", :class=>"#{'a' if params[:ltr].match(/[0-9]/)}"} #
+
 		- @albums.each do |album|
 			%div{:id=>['album', album.album_id],:class=>[album.artist.urlize, album.year]}
 				%a{:href=>album.url}

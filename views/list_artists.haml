@@ -13,7 +13,10 @@
 			%ul
 				- ('a'..'z').each do |l|
 					%li
-						%a{:href=>"/elenco_testi/album/#{l}"}= l
+						%a{:href=>"/artisti/#{l}", :class=>"#{'a' if params[:ltr] == l}"}= l.capitalize
+				%li
+					%a{:href=>"/artisti/0", :class=>"#{'a' if params[:ltr].match(/[0-9]/)}"} #
+
 		- @artists.each do |a|
 			-a.each do |a|
 				-if a.is_a? Hash
