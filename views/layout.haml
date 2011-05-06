@@ -18,9 +18,9 @@
 						%li
 							%a{:href=>"/testi/", :title=>"testi e album hip hop", :class=>(@is_list == true && 'active')} Testi & Album
 						%li
-							%a{:href=>"/add_testo/", :title=>"Inserisci testo", :class=>(@is_add_song == true && 'active')}} Inserisci testo
+							%a{:href=>"/add_testo/", :title=>"Inserisci testo", :class=>(@is_add_song == true && 'active')} Inserisci testo
 						%li
-							%a{:href=>"/add_album/", :title=>"Inserisci album", :class=>(@is_add_album == true && 'active')}} Inserisci album
+							%a{:href=>"/add_album/", :title=>"Inserisci album", :class=>(@is_add_album == true && 'active')} Inserisci album
 				- unless @is_home.nil?
 					%form{:action=>"/search", :id=>:finder}
 						%input(name="s" type="text" placeholder="titolo canzone")
