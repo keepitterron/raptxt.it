@@ -49,8 +49,7 @@ class String
     'OE' => [188],
     'oe' => [189]
   }
-  
-  
+
   # Remove the accents from the string. Uses String::ACCENTS_MAPPING as the source map.
   def removeaccents    
     str = String.new(self)
@@ -58,12 +57,10 @@ class String
       packed = accents.pack('U*')
       rxp = Regexp.new("[#{packed}]", nil)
       str.gsub!(rxp, letter)
-    }
-    
+    }    
     str
   end
-  
-  
+
   # Convert a string to a format suitable for a URL without ever using escaped characters.
   # It calls strip, removeaccents, downcase (optional) then removes the spaces (optional)
   # and finally removes any characters matching the default regexp (/[^-_A-Za-z0-9]/).
