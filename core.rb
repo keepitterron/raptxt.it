@@ -38,6 +38,19 @@ module Raptxt
 			haml :add_album
 		end
 		get '/add_testo/?' do
+			@s = Song.new
+			@albums = Album.for_select
+			haml :add_song
+		end
+		post '/add_testo/?' do
+			begin
+			@s = Song.create params[:song]
+			redirect @s.url
+			rescue
+			@s = Song.load params[:song]
+				@error = $!
+			end
+			haml :add_song
 		end
 		
 		get '/album/:ltr?' do
