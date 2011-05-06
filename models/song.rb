@@ -1,4 +1,5 @@
 class Song < Sequel::Model(:song)
+	many_to_one :album
   attr_accessor :album_title, :album_artist, :album_cover
   
   def after_initialize
