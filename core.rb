@@ -24,10 +24,12 @@ module Raptxt
 		end
 		
 		get '/add_album/?' do
+			@is_add_album = true
 			@a = Album.new
 			haml :add_album
 		end
 		post '/add_album/?' do
+			@is_add_album = true
 			begin
 			@a = Album.create params[:album]
 			redirect @a.url
@@ -38,11 +40,13 @@ module Raptxt
 			haml :add_album
 		end
 		get '/add_testo/?' do
+			@is_add_song = true
 			@s = Song.new
 			@albums = Album.for_select
 			haml :add_song
 		end
 		post '/add_testo/?' do
+			@is_add_song = true
 			begin
 			@s = Song.create params[:song]
 			redirect @s.url
